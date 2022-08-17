@@ -1,0 +1,11 @@
+.products {
+
+    &__list {
+        display: grid;
+        column-gap: 70px;
+        row-gap: 60px;
+        grid-template-columns: repeat(3, 220px);
+        grid-auto-rows: 1ft;
+        justify-content: center;
+    }
+}
