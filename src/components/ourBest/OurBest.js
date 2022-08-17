@@ -5,7 +5,16 @@ import styles from './ourBest.module.scss';
 
 const OurBest = () => {
   const items = productsArr.map((item, i) => {
-    return <ProductItem key={i} tabIndex={0} src={item.img} name={item.name} price={item.price} />;
+    return (
+      <ProductItem
+        key={i}
+        tabIndex={0}
+        src={item.img}
+        name={item.name}
+        price={item.price}
+        background="bgyel"
+      />
+    );
   });
 
   return (

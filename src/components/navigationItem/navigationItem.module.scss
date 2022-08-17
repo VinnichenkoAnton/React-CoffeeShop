@@ -3,14 +3,25 @@
 .navigationitem {
     font-weight: 400;
     font-size: 12px;
+    &_white {
+      a {
+          color: $white-color;
+          &:hover {
+            color: $white-color;  
+          }
+      }
+    }
+    &_black {
+      a {
+          color: $black-color;
+          &:hover {
+            color: $black-color;  
+          }
+      }
+    }
     a {
         position: relative;
         display: block;
-        color: $white-color;
-        &:hover {
-            color: $white-color;
-            
-        }
         &:before {
           position: absolute;
           bottom: 0;
@@ -23,27 +34,18 @@
     }
 }
 
-.navigationitem_black {
-  a {
-      color: $black-color;
-      &:hover {
-        color: $black-color;  
-      }
-  }
-}
-
-.navigationitem_show {
-  a {
-    &:before {
-      transition: all 0.6s;
-      position: absolute;
-      bottom: 0;
-      left: -32px;
-      content: url('../../resources/twoCoffeeBeans.png');
-      width: 35px;
-      height: 35px;
-      opacity: 1;
-    }
-  }
-}
+// .navigationitem_show {
+//   a {
+//     &:before {
+//       transition: all 0.6s;
+//       position: absolute;
+//       bottom: 0;
+//       left: -32px;
+//       content: url('../../resources/twoCoffeeBeans.png');
+//       width: 35px;
+//       height: 35px;
+//       opacity: 1;
+//     }
+//   }
+// }
 

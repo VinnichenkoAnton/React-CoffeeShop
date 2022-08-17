@@ -11,11 +11,11 @@ import aboutOurBeansImg from '../../resources/aboutOurBeans.jpg';
 function App() {
   return (
     <>
-      {/* <Mainscreen background = 'primary' title='Everything You Love About Coffee'/>
+      {/* <Mainscreen screen = 'first' title='Everything You Love About Coffee'/>
       <AboutUs/>
       <OurBest/>
       <Footer/>  */}
-      <Mainscreen background="secondary" title="Our Coffee" />
+      <Mainscreen screen="second" title="Our Coffee" />
       <DescrCard
         img={aboutOurBeansImg}
         title="About our beans"
@@ -36,7 +36,7 @@ function App() {
       />
       <Filters />
       <ProductsList />
-      <OurBest />
+      <Footer />
     </>
   );
 }

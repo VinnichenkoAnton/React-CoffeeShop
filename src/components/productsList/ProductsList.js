@@ -17,6 +17,7 @@ const ProductsList = () => {
               name={item.name}
               price={item.price}
               country={item.country}
+              background="bgwhite"
             />
           );
         })}
