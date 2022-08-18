@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Mainscreen from '../mainScreen/Mainscreen';
 import AboutUs from '../aboutUs/AboutUs';
 import OurBest from '../ourBest/OurBest';
@@ -9,6 +11,11 @@ import ProductsList from '../productsList/ProductsList';
 import aboutOurBeansImg from '../../resources/aboutOurBeans.jpg';
 
 function App() {
+  const [idForFilter, setIdForFilter] = useState('');
+  const clickHandler = (id) => {
+    setIdForFilter(id);
+  };
+
   return (
     <>
       {/* <Mainscreen screen = 'first' title='Everything You Love About Coffee'/>
@@ -34,8 +41,8 @@ function App() {
           </p>
         }
       />
-      <Filters />
-      <ProductsList />
+      <Filters clickHandler={clickHandler} />
+      <ProductsList id={idForFilter} />
       <Footer />
     </>
   );
