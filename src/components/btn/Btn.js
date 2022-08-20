@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import styles from './btn.module.scss';
 
 const BtnMain = () => {
@@ -10,9 +8,12 @@ const BtnMain = () => {
   );
 };
 
-const Btn = ({ text, clickHandler }) => {
+const Btn = ({ text, onChangeId }) => {
+  const clickHandler = (e) => {
+    onChangeId(e.target.innerText);
+  };
   return (
-    <button type="button" className={styles.btn} onClick={(e) => clickHandler(e.target.innerText)}>
+    <button type="button" className={styles.btn} onClick={clickHandler}>
       {text}
     </button>
   );

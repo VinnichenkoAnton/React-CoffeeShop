@@ -7,7 +7,7 @@ const productsArr = [
     img: `${imgSolimo}`,
     name: 'Solimo Coffee Beans 2 kg',
     price: '10.73$',
-    country: 'Brasil',
+    country: 'Brazil',
   },
   {
     img: `${imgPresto}`,

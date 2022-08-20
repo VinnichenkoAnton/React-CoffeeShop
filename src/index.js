@@ -6,8 +6,4 @@ import 'normalize.css';
 import './style/style.module.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<App />);

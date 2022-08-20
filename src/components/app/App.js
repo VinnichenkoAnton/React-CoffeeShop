@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+import { productsArr } from '../../mocks/productsArr';
 
 import Mainscreen from '../mainScreen/Mainscreen';
 import AboutUs from '../aboutUs/AboutUs';
@@ -11,7 +13,27 @@ import ProductsList from '../productsList/ProductsList';
 import aboutOurBeansImg from '../../resources/aboutOurBeans.jpg';
 
 function App() {
-  const [idForFilter, setIdForFilter] = useState('');
+  const [idForFilter, setIdForFilter] = useState(null);
+
+  const inintialProductsList = [
+    productsArr[0],
+    productsArr[1],
+    productsArr[2],
+    productsArr[1],
+    productsArr[1],
+    productsArr[1],
+  ];
+
+  const [productsList, setProductsList] = useState(inintialProductsList);
+
+  useEffect(() => {
+    if (!idForFilter) {
+      setProductsList(inintialProductsList);
+    } else {
+      setProductsList(inintialProductsList.filter((item) => item.country === idForFilter));
+    }
+  }, [idForFilter]);
+
   const clickHandler = (id) => {
     setIdForFilter(id);
   };
@@ -41,8 +63,8 @@ function App() {
           </p>
         }
       />
-      <Filters clickHandler={clickHandler} />
-      <ProductsList id={idForFilter} />
+      <Filters onChangeId={clickHandler} />
+      <ProductsList filteredProductsList={productsList} />
       <Footer />
     </>
   );

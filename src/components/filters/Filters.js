@@ -2,7 +2,7 @@ import { Btn } from '../btn/Btn';
 
 import styles from './filters.module.scss';
 
-const Filters = ({ clickHandler }) => {
+const Filters = ({ onChangeId }) => {
   return (
     <section className={styles.filters}>
       <div className={styles.filters__inpwrapper}>
@@ -20,9 +20,9 @@ const Filters = ({ clickHandler }) => {
       <div className={styles.filters__btnswrapper}>
         <div className={styles.filters__choise}>Or filter</div>
         <div className={styles.filters__btns}>
-          <Btn text="Brazil" clickHandler={clickHandler} />
-          <Btn text="Kenya" clickHandler={clickHandler} />
-          <Btn text="Columbia" clickHandler={clickHandler} />
+          <Btn text="Brazil" onChangeId={onChangeId} />
+          <Btn text="Kenya" onChangeId={onChangeId} />
+          <Btn text="Colombia" onChangeId={onChangeId} />
         </div>
       </div>
     </section>
