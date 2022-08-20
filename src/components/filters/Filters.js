@@ -2,7 +2,11 @@ import { Btn } from '../btn/Btn';
 
 import styles from './filters.module.scss';
 
-const Filters = ({ onChangeId }) => {
+const Filters = ({ onChangeId, onFilterTyping }) => {
+  const filterTypingHandler = (e) => {
+    onFilterTyping(e.target.value);
+  };
+
   return (
     <section className={styles.filters}>
       <div className={styles.filters__inpwrapper}>
@@ -10,11 +14,13 @@ const Filters = ({ onChangeId }) => {
           Lookiing for
         </label>
         <input
+          defaultValue=""
           placeholder="start typing here..."
           maxLength="20"
           className={styles.filters__input}
           type="text"
           id="username"
+          onChange={filterTypingHandler}
         ></input>
       </div>
       <div className={styles.filters__btnswrapper}>
@@ -23,6 +29,7 @@ const Filters = ({ onChangeId }) => {
           <Btn text="Brazil" onChangeId={onChangeId} />
           <Btn text="Kenya" onChangeId={onChangeId} />
           <Btn text="Colombia" onChangeId={onChangeId} />
+          <Btn text="All" onChangeId={onChangeId} />
         </div>
       </div>
     </section>

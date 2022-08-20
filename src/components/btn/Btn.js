@@ -9,11 +9,11 @@ const BtnMain = () => {
 };
 
 const Btn = ({ text, onChangeId }) => {
-  const clickHandler = (e) => {
+  const filterClickHandler = (e) => {
     onChangeId(e.target.innerText);
   };
   return (
-    <button type="button" className={styles.btn} onClick={clickHandler}>
+    <button type="button" className={styles.btn} onClick={filterClickHandler}>
       {text}
     </button>
   );

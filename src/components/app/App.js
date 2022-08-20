@@ -26,16 +26,37 @@ function App() {
 
   const [productsList, setProductsList] = useState(inintialProductsList);
 
+  const [textFromFilter, setTextFromFilter] = useState('');
+
   useEffect(() => {
-    if (!idForFilter) {
+    if (!idForFilter || idForFilter === 'All') {
       setProductsList(inintialProductsList);
     } else {
       setProductsList(inintialProductsList.filter((item) => item.country === idForFilter));
     }
   }, [idForFilter]);
 
-  const clickHandler = (id) => {
+  const filterClickHandler = (id) => {
     setIdForFilter(id);
+    if (!idForFilter || idForFilter === 'All') {
+      setProductsList(inintialProductsList);
+    } else {
+      setProductsList(inintialProductsList.filter((item) => item.country === idForFilter));
+    }
+  };
+
+  const filterTypingHandler = (text) => {
+    setTextFromFilter(text);
+
+    if (textFromFilter.length === 0) {
+      return setProductsList(inintialProductsList);
+    }
+
+    setProductsList(
+      inintialProductsList.filter((item) =>
+        item.name.trim().toLowerCase().includes(textFromFilter),
+      ),
+    );
   };
 
   return (
@@ -63,7 +84,7 @@ function App() {
           </p>
         }
       />
-      <Filters onChangeId={clickHandler} />
+      <Filters onChangeId={filterClickHandler} onFilterTyping={filterTypingHandler} />
       <ProductsList filteredProductsList={productsList} />
       <Footer />
     </>
