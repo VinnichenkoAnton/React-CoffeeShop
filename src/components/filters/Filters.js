@@ -2,7 +2,7 @@ import { Btn } from '../btn/Btn';
 
 import styles from './filters.module.scss';
 
-const Filters = ({ onChangeId, onFilterTyping }) => {
+const Filters = ({ valueForInput, onChangeId, onFilterTyping }) => {
   const filterTypingHandler = (e) => {
     onFilterTyping(e.target.value);
   };
@@ -14,7 +14,7 @@ const Filters = ({ onChangeId, onFilterTyping }) => {
           Lookiing for
         </label>
         <input
-          defaultValue=""
+          value={valueForInput}
           placeholder="start typing here..."
           maxLength="20"
           className={styles.filters__input}
