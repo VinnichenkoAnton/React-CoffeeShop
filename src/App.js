@@ -1,8 +1,8 @@
-import Mainscreen from './components/mainScreen/Mainscreen';
+import Header from './components/header/Header';
 import AboutUs from './components/aboutUs/AboutUs';
 import OurBest from './components/ourBest/OurBest';
 import Footer from './components/footer/Footer';
-import DescrCard from './components/descrCard/DescrCard';
+import Product from './components/product/Product';
 import FilteredList from './components/filteredList/FilteredList';
 
 import aboutOurBeansImg from './resources/aboutOurBeans.jpg';
@@ -10,15 +10,17 @@ import aboutOurBeansImg from './resources/aboutOurBeans.jpg';
 function App() {
   return (
     <>
-      {/* <Mainscreen screen = 'first' title='Everything You Love About Coffee'/>
-      <AboutUs/>
-      <OurBest/>
-      <Footer/>  */}
-      <Mainscreen screen="second" title="Our Coffee" />
-      <DescrCard
+      <Header screen="mainscreen" title="Everything You Love About Coffee" />
+      <AboutUs />
+      <OurBest />
+      <Footer />
+
+      <Header screen="second" title="Our Coffee" />
+      <Product
         img={aboutOurBeansImg}
+        imgwidth="narrow"
         title="About our beans"
-        descr={
+        generalInfo={
           <p>
             Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
             <br />
@@ -35,6 +37,17 @@ function App() {
         }
       />
       <FilteredList />
+      <Footer />
+
+      <Header screen="second" title="Our Coffee" />
+      <Product
+        img={aboutOurBeansImg}
+        imgwidth="wide"
+        title="About it"
+        country="Brasil"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        price="16.99$"
+      />
       <Footer />
     </>
   );

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 
 import NavigationItem from '../navigationItem/NavigationItem';
 
-import styles from './navigation.module.scss';
+import styles from './Navigation.module.scss';
 
 const navItemArr = [
   {

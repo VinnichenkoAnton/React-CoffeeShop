@@ -1,12 +1,14 @@
 import { productsArr } from '../../mocks/productsArr';
-import ProductItem from '../productItem/ProductItem';
+import ProductCard from '../productCard/ProductCard';
+import Subtitle from '../subtitle/Subtitle';
 
-import styles from './ourBest.module.scss';
+import styles from './OurBest.module.scss';
 
 const OurBest = () => {
-  const items = productsArr.map((item, i) => {
+  const bestOfProductsArr = [productsArr[0], productsArr[1], productsArr[2]];
+  const items = bestOfProductsArr.map((item, i) => {
     return (
-      <ProductItem
+      <ProductCard
         key={i}
         tabIndex={0}
         src={item.img}
@@ -19,7 +21,7 @@ const OurBest = () => {
 
   return (
     <section className={styles.ourbest}>
-      <h3 className={styles.ourbest__title}>Our best</h3>
+      <Subtitle text="Our best" />
       <ul className={styles.ourbest__list}>{items}</ul>
     </section>
   );

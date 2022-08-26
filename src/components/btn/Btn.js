@@ -1,4 +1,4 @@
-import styles from './btn.module.scss';
+import styles from './Btn.module.scss';
 
 const BtnMain = () => {
   return (

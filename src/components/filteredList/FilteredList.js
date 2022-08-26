@@ -8,18 +8,9 @@ import ProductsList from '../productsList/ProductsList';
 const FilteredList = () => {
   const [idForFilter, setIdForFilter] = useState(null);
 
-  const inintialProductsList = [
-    productsArr[0],
-    productsArr[1],
-    productsArr[2],
-    productsArr[1],
-    productsArr[1],
-    productsArr[1],
-  ];
-
   const [textFromFilter, setTextFromFilter] = useState('');
 
-  const [productsList, setProductsList] = useState(inintialProductsList);
+  const [productsList, setProductsList] = useState(productsArr);
 
   const filterClickHandler = (id) => {
     setIdForFilter(id);
@@ -31,19 +22,17 @@ const FilteredList = () => {
 
   const clickCheck = () => {
     if (!idForFilter || idForFilter === 'All') {
-      setProductsList(inintialProductsList);
+      setProductsList(productsArr);
     } else if (idForFilter && idForFilter !== 'All') {
-      setProductsList(inintialProductsList.filter((item) => item.country === idForFilter));
+      setProductsList(productsArr.filter((item) => item.country === idForFilter));
     }
   };
   const inputCheck = () => {
     if (!textFromFilter) {
-      setProductsList(inintialProductsList);
+      setProductsList(productsArr);
     } else if (textFromFilter) {
       setProductsList(
-        inintialProductsList.filter((item) =>
-          item.name.trim().toLowerCase().includes(textFromFilter),
-        ),
+        productsArr.filter((item) => item.name.trim().toLowerCase().includes(textFromFilter)),
       );
     }
   };

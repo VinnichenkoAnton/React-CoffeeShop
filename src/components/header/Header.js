@@ -4,9 +4,9 @@ import Navigation from '../navigation/Navigation';
 import CoffeeBeans from '../coffeeBeans/CoffeBeans';
 import { BtnMain } from '../btn/Btn';
 
-import styles from './mainscreen.module.scss';
+import styles from './Header.module.scss';
 
-const Mainscreen = ({ screen, title }) => {
+const Header = ({ screen, title }) => {
   const additionalInfo = (
     <>
       <CoffeeBeans coffeeColor="white" />
@@ -29,4 +29,4 @@ const Mainscreen = ({ screen, title }) => {
   );
 };
 
-export default Mainscreen;
+export default Header;

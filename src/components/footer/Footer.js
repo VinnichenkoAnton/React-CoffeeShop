@@ -1,7 +1,7 @@
 import Navigation from '../navigation/Navigation';
 import CoffeeBeans from '../coffeeBeans/CoffeBeans';
 
-import styles from './footer.module.scss';
+import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (

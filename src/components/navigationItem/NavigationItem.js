@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import styles from './navigationItem.module.scss';
+import styles from './NavigationItem.module.scss';
 
 const NavigationItem = ({ color, text, href }) => {
   return (

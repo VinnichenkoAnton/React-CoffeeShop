@@ -1,6 +1,6 @@
 import { Btn } from '../btn/Btn';
 
-import styles from './filters.module.scss';
+import styles from './Filters.module.scss';
 
 const Filters = ({ valueForInput, onChangeId, onFilterTyping }) => {
   const filterTypingHandler = (e) => {
