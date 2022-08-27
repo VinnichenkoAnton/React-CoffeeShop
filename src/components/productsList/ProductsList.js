@@ -3,9 +3,6 @@ import ProductCard from '../productCard/ProductCard';
 import styles from './ProductsList.module.scss';
 
 const ProductsList = ({ filteredProductsList }) => {
-  const itemChoseHandler = (productId) => {
-    console.log(productId);
-  };
   return (
     <section>
       <ul className={styles.products__list}>
@@ -20,7 +17,6 @@ const ProductsList = ({ filteredProductsList }) => {
               price={item.price}
               country={item.country}
               background="bgwhite"
-              onClick={() => itemChoseHandler(item.id)}
             />
           );
         })}

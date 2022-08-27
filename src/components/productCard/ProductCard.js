@@ -1,19 +1,15 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 
 import styles from './ProductCard.module.scss';
 
-const ProductCard = ({ tabIndex, src, name, price, country, background, onClick, id }) => {
-  const handleClick = (id) => {
-    onClick(id);
-  };
+const ProductCard = ({ tabIndex, src, name, price, country, background, id }) => {
   return (
-    <Link
+    <NavLink
       to={`/ourcoffee/${id}`}
       data-id={id}
       tabIndex={tabIndex}
       className={classNames(styles.productcard__product, styles[`background_${background}`])}
-      onClick={handleClick}
     >
       <div className={styles.productcard__img}>
         <img src={src} alt={name} />
@@ -23,7 +19,7 @@ const ProductCard = ({ tabIndex, src, name, price, country, background, onClick,
       {country && <div className={styles.productcard__country}>{country}</div>}
 
       <div className={styles.productcard__price}>{price}</div>
-    </Link>
+    </NavLink>
   );
 };
 

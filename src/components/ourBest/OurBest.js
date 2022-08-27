@@ -5,15 +5,16 @@ import Subtitle from '../subtitle/Subtitle';
 import styles from './OurBest.module.scss';
 
 const OurBest = () => {
-  const bestOfProductsArr = [productsArr[0], productsArr[1], productsArr[2]];
-  const items = bestOfProductsArr.map((item, i) => {
+  const bestProductsArr = [productsArr[0], productsArr[1], productsArr[2]];
+  const items = bestProductsArr.map(({ id, img, name, price }) => {
     return (
       <ProductCard
-        key={i}
+        id={id}
+        key={id}
         tabIndex={0}
-        src={item.img}
-        name={item.name}
-        price={item.price}
+        src={img}
+        name={name}
+        price={price}
         background="bgyel"
       />
     );
