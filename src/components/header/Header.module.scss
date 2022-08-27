@@ -39,4 +39,11 @@
     background: url(../../resources/tertiaryImg.jpg) no-repeat 50%/cover;
     min-height: 260px;
     padding-top: 52px;
+    &__title {
+        margin-top: 60px;
+        font-weight: 700;
+        font-size: 40px;
+        color: $white-color;
+        text-align: center;
+    }
 }

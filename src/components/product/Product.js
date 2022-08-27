@@ -34,7 +34,7 @@ const Product = ({ img, imgwidth, title, generalInfo, country, description, pric
         </div>
       </div>
 
-      {generalInfo ? <div className={styles.descrcard__line}></div> : null}
+      {generalInfo ? <div className={styles.product__line}></div> : null}
     </section>
   );
 };

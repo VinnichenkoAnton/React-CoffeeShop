@@ -19,7 +19,6 @@ const FilteredList = () => {
   const filterTypingHandler = (text) => {
     setTextFromFilter(text);
   };
-
   const clickCheck = () => {
     if (!idForFilter || idForFilter === 'All') {
       setProductsList(productsArr);
@@ -32,7 +31,11 @@ const FilteredList = () => {
       setProductsList(productsArr);
     } else if (textFromFilter) {
       setProductsList(
-        productsArr.filter((item) => item.name.trim().toLowerCase().includes(textFromFilter)),
+        productsArr.filter(
+          (item) =>
+            item.name.trim().toLowerCase().includes(textFromFilter) ||
+            item.price.trim().includes(textFromFilter),
+        ),
       );
     }
   };

@@ -1,11 +1,19 @@
-import classNames from 'classnames/bind';
+import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
 
 import styles from './NavigationItem.module.scss';
 
-const NavigationItem = ({ color, text, href }) => {
+const NavigationItem = ({ color, text, to }) => {
   return (
     <li className={classNames(styles.navigationitem, styles[`navigationitem_${color}`])}>
-      <a href={href}>{text}</a>
+      <NavLink
+        className={styles.navigationitem_inactive}
+        exact
+        activeClassName={styles.navigationitem_active}
+        to={to}
+      >
+        {text}
+      </NavLink>
     </li>
   );
 };

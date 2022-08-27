@@ -1,14 +1,19 @@
-import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
 import styles from './ProductCard.module.scss';
 
-const ProductCard = ({ tabIndex, src, name, price, country, background, itemChoseHandler, id }) => {
+const ProductCard = ({ tabIndex, src, name, price, country, background, onClick, id }) => {
+  const handleClick = (id) => {
+    onClick(id);
+  };
   return (
-    <li
+    <Link
+      to={`/ourcoffee/${id}`}
       data-id={id}
       tabIndex={tabIndex}
       className={classNames(styles.productcard__product, styles[`background_${background}`])}
-      onClick={itemChoseHandler}
+      onClick={handleClick}
     >
       <div className={styles.productcard__img}>
         <img src={src} alt={name} />
@@ -18,7 +23,7 @@ const ProductCard = ({ tabIndex, src, name, price, country, background, itemChos
       {country && <div className={styles.productcard__country}>{country}</div>}
 
       <div className={styles.productcard__price}>{price}</div>
-    </li>
+    </Link>
   );
 };
 

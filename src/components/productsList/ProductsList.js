@@ -3,11 +3,8 @@ import ProductCard from '../productCard/ProductCard';
 import styles from './ProductsList.module.scss';
 
 const ProductsList = ({ filteredProductsList }) => {
-  const itemChoseHandler = (e) => {
-    const chosenProduct = filteredProductsList.filter(
-      (item) => item.id === e.currentTarget.getAttribute('data-id'),
-    );
-    console.log(chosenProduct);
+  const itemChoseHandler = (productId) => {
+    console.log(productId);
   };
   return (
     <section>
@@ -23,7 +20,7 @@ const ProductsList = ({ filteredProductsList }) => {
               price={item.price}
               country={item.country}
               background="bgwhite"
-              itemChoseHandler={itemChoseHandler}
+              onClick={() => itemChoseHandler(item.id)}
             />
           );
         })}

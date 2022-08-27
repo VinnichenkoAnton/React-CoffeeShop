@@ -7,15 +7,15 @@ import styles from './Navigation.module.scss';
 const navItemArr = [
   {
     text: 'Coffee house',
-    href: '#',
+    to: '/',
   },
   {
     text: 'Our coffee',
-    href: '#',
+    to: '/ourcoffee',
   },
   {
     text: 'For your pleasure',
-    href: '#',
+    to: '/yourpleasure',
   },
 ];
 
@@ -24,7 +24,7 @@ const Navigation = ({ color, align }) => {
     <nav>
       <ul className={classNames(styles.navigation, styles[`navigation_${align}`])}>
         {navItemArr.map((item, i) => {
-          return <NavigationItem color={color} key={i} text={item.text} href={item.href} />;
+          return <NavigationItem color={color} key={i} text={item.text} to={item.to} />;
         })}
       </ul>
     </nav>
