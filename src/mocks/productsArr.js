@@ -4,7 +4,7 @@ import imgAromisto from '../resources/products/aromistoImg.jpg';
 
 const productsArr = [
   {
-    id: 'pr1',
+    id: '1',
     img: `${imgSolimo}`,
     name: 'Solimo Coffee Beans 2 kg',
     price: '10.73$',
@@ -13,7 +13,7 @@ const productsArr = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    id: 'pr2',
+    id: '2',
     img: `${imgPresto}`,
     name: 'Presto Coffee Beans 1 kg',
     price: '15.99$',
@@ -22,7 +22,7 @@ const productsArr = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    id: 'pr3',
+    id: '3',
     img: `${imgAromisto}`,
     name: 'AROMISTICO Coffee 1 kg',
     price: '6.99$',
@@ -31,7 +31,7 @@ const productsArr = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    id: 'pr4',
+    id: '4',
     img: `${imgAromisto}`,
     name: 'AROMISTICO Coffee 1 kg',
     price: '6.99$',
@@ -40,7 +40,7 @@ const productsArr = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    id: 'pr5',
+    id: '5',
     img: `${imgAromisto}`,
     name: 'AROMISTICO Coffee 1 kg',
     price: '6.99$',
@@ -49,7 +49,7 @@ const productsArr = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    id: 'pr6',
+    id: '6',
     img: `${imgSolimo}`,
     name: 'Solimo Coffee Beans 2 kg',
     price: '10.73$',
