@@ -1,7 +1,9 @@
 import Header from '../header/Header';
 import Product from '../product/Product';
+import ProductsList from '../productsList/ProductsList';
 import Footer from '../footer/Footer';
 
+import { productsArr } from '../../mocks/productsArr';
 import aboutOurGoodsImg from '../../resources/aboutOurGoods.jpg';
 
 const YourPleasurePage = () => {
@@ -28,6 +30,7 @@ const YourPleasurePage = () => {
           </p>
         }
       />
+      <ProductsList filteredProductsList={productsArr} />
       <Footer />
     </>
   );
