@@ -16,7 +16,7 @@ const Page404 = () => {
           marginTop: '30px',
           textDecoration: 'underline',
         }}
-        to="/"
+        to=".."
       >
         Back to main page
       </Link>

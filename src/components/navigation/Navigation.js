@@ -8,17 +8,14 @@ const navItemArr = [
   {
     text: 'Coffee house',
     to: '/',
-    exact: true,
   },
   {
     text: 'Our coffee',
     to: '/ourcoffee',
-    exact: false,
   },
   {
     text: 'For your pleasure',
     to: '/yourpleasure',
-    exact: true,
   },
 ];
 

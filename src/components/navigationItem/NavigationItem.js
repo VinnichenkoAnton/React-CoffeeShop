@@ -7,10 +7,10 @@ const NavigationItem = ({ color, text, to, exact }) => {
   return (
     <li className={classNames(styles.navigationitem, styles[`navigationitem_${color}`])}>
       <NavLink
-        className={styles.navigationitem_inactive}
-        activeClassName={styles.navigationitem_active}
+        className={({ isActive }) =>
+          classNames(styles.navigationitem_inactive, isActive ? styles.navigationitem_active : '')
+        }
         to={to}
-        exact={exact}
       >
         {text}
       </NavLink>
