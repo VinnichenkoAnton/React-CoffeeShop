@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './NavigationItem.module.scss';
 
-const NavigationItem = ({ color, text, to, exact }) => {
+const NavigationItem = ({ color, text, to }) => {
   return (
     <li className={classNames(styles.navigationitem, styles[`navigationitem_${color}`])}>
       <NavLink

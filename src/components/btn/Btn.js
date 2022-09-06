@@ -8,12 +8,12 @@ const BtnMain = () => {
   );
 };
 
-const Btn = ({ text, onChangeId }) => {
-  const filterClickHandler = (e) => {
-    onChangeId(e.target.innerText);
+const Btn = ({ text, enteredId }) => {
+  const clickHandler = (e) => {
+    enteredId(e.target.innerText);
   };
   return (
-    <button type="button" className={styles.btn} onClick={filterClickHandler}>
+    <button type="button" className={styles.btn} onClick={clickHandler}>
       {text}
     </button>
   );

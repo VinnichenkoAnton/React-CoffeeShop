@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import CoffeeBeans from '../coffeeBeans/CoffeBeans';
 import Subtitle from '../subtitle/Subtitle';
 
-import styles from './Product.module.scss';
+import styles from './AboutOurProduct.module.scss';
 
-const Product = ({ img, imgwidth, title, generalInfo, country, description, price }) => {
+const AboutOurProduct = ({ img, imgwidth, title, generalInfo, country, description, price }) => {
   return (
     <section className={styles.product}>
       <div className={styles.product__container}>
@@ -39,4 +39,4 @@ const Product = ({ img, imgwidth, title, generalInfo, country, description, pric
   );
 };
 
-export default Product;
+export default AboutOurProduct;

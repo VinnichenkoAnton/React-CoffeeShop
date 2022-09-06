@@ -1,5 +1,5 @@
 import Header from '../header/Header';
-import Product from '../product/Product';
+import AboutOurProduct from '../aboutOurProduct/AboutOurProduct';
 import FilteredList from '../filteredList/FilteredList';
 import Footer from '../footer/Footer';
 
@@ -9,7 +9,7 @@ const OurCoffeePage = () => {
   return (
     <>
       <Header screen="second" title="Our Coffee" />
-      <Product
+      <AboutOurProduct
         img={aboutOurBeansImg}
         imgwidth="narrow"
         title="About our beans"

@@ -2,9 +2,9 @@ import { Btn } from '../btn/Btn';
 
 import styles from './Filters.module.scss';
 
-const Filters = ({ valueForInput, onChangeId, onFilterTyping }) => {
+const Filters = ({ inputValue, enteredId, enteredText }) => {
   const filterTypingHandler = (e) => {
-    onFilterTyping(e.target.value);
+    enteredText(e.target.value);
   };
 
   return (
@@ -14,7 +14,7 @@ const Filters = ({ valueForInput, onChangeId, onFilterTyping }) => {
           Lookiing for
         </label>
         <input
-          value={valueForInput}
+          value={inputValue}
           placeholder="start typing here..."
           maxLength="20"
           className={styles.filters__input}
@@ -26,10 +26,10 @@ const Filters = ({ valueForInput, onChangeId, onFilterTyping }) => {
       <div className={styles.filters__btnswrapper}>
         <div className={styles.filters__choise}>Or filter</div>
         <div className={styles.filters__btns}>
-          <Btn text="Brazil" onChangeId={onChangeId} />
-          <Btn text="Kenya" onChangeId={onChangeId} />
-          <Btn text="Colombia" onChangeId={onChangeId} />
-          <Btn text="All" onChangeId={onChangeId} />
+          <Btn text="Brazil" enteredId={enteredId} />
+          <Btn text="Kenya" enteredId={enteredId} />
+          <Btn text="Colombia" enteredId={enteredId} />
+          <Btn text="All" enteredId={enteredId} />
         </div>
       </div>
     </section>

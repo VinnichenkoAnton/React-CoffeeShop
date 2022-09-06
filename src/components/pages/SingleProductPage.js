@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Header from '../header/Header';
-import Product from '../product/Product';
+import AboutOurProduct from '../aboutOurProduct/AboutOurProduct';
 import Footer from '../footer/Footer';
 
 import { productsArr } from '../../mocks/productsArr';
@@ -52,7 +52,7 @@ const SingleProductPage = () => {
 
 const View = ({ infoForProduct }) => {
   return (
-    <Product
+    <AboutOurProduct
       key={infoForProduct.id}
       img={infoForProduct.img}
       imgwidth="wide"

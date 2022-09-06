@@ -1,5 +1,5 @@
 import Header from '../header/Header';
-import Product from '../product/Product';
+import AboutOurProduct from '../aboutOurProduct/AboutOurProduct';
 import ProductsList from '../productsList/ProductsList';
 import Footer from '../footer/Footer';
 
@@ -10,7 +10,7 @@ const YourPleasurePage = () => {
   return (
     <>
       <Header screen="third" title="For your pleasure" />
-      <Product
+      <AboutOurProduct
         img={aboutOurGoodsImg}
         imgwidth="narrow"
         title="About our goods"
