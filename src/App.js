@@ -1,7 +1,8 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 
 import Spinner from './components/spinner/Spinner';
+import { CSSTransition } from 'react-transition-group';
 
 const MainPage = lazy(() => import('./components/pages/MainPage'));
 const OurCoffeePage = lazy(() => import('./components/pages/OurCoffeePage'));
@@ -22,7 +23,9 @@ function App() {
 
           <Route path="/yourpleasure" element={<YourPleasurePage />} />
 
-          <Route path="*" element={<Page404 />} />
+          <Route path="notfound" element={<Page404 />} />
+
+          <Route path="*" element={<Navigate to="/notfound" replace />} />
         </Routes>
       </Suspense>
     </Router>

@@ -7,7 +7,6 @@ const ProductCard = ({ tabIndex, src, name, price, country, background, id }) =>
   return (
     <NavLink
       to={`/ourcoffee/${id}`}
-      data-id={id}
       tabIndex={tabIndex}
       className={classNames(styles.productcard__product, styles[`background_${background}`])}
     >

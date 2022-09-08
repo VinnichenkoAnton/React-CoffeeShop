@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-import { productsArr } from '../../mocks/productsArr';
-
 import useCoffeeService from '../../services/useCoffeeService';
 
 import ProductCard from '../productCard/ProductCard';
@@ -15,15 +13,15 @@ const OurBest = () => {
   const [bestProducts, setBestProducts] = useState([]);
 
   useEffect(() => {
-    getCoffeeData().then(onCoffeeLoaded);
+    clearError();
+    bestCoffeeData().then(onCoffeeLoaded);
   }, []);
   const onCoffeeLoaded = (coffeeLoaded) => {
     setBestProducts(coffeeLoaded);
   };
 
-  const { loading, error, getCoffeeData, clearError } = useCoffeeService();
+  const { loading, error, bestCoffeeData, clearError } = useCoffeeService();
 
-  // const bestProductsArr = [productsArr[0], productsArr[1], productsArr[2]];
   const items = bestProducts.map(({ id, img, name, price }) => {
     return (
       <ProductCard

@@ -1,33 +1,38 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
+import useCoffeeService from '../../services/useCoffeeService';
 import ErrorMessage from '../errorMessage/ErrorMessage';
+import Spinner from '../spinner/Spinner';
 import Header from '../header/Header';
 import AboutOurProduct from '../aboutOurProduct/AboutOurProduct';
 import Footer from '../footer/Footer';
 
-import { productsArr } from '../../mocks/productsArr';
-
 const SingleProductPage = () => {
-  let { id } = useParams();
+  const { loading, error, clearError, allCoffeeData } = useCoffeeService();
+
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   const [infoForProduct, setInfoForProduct] = useState(null);
 
   useEffect(() => {
-    updatePage();
+    if (!+id || id > 7 || id < 2) {
+      navigate('/notfound', { replace: true });
+    }
+    clearError();
+    allCoffeeData().then(onCoffeeLoaded);
   }, [id]);
 
-  const updatePage = () => {
-    setInfoForProduct(productsArr.find((item) => item.id === id));
+  const onCoffeeLoaded = (allCoffee) => {
+    setInfoForProduct(...allCoffee.filter((item) => item.id === +id));
   };
 
-  const content =
-    !infoForProduct || id > productsArr.length ? (
-      <ErrorMessage />
-    ) : (
-      <View infoForProduct={infoForProduct} />
-    );
-
+  const errorMessage = error ? <ErrorMessage /> : null;
+  const spinner = loading ? <Spinner /> : null;
+  const content = !(loading || error || !infoForProduct) ? (
+    <View infoForProduct={infoForProduct} />
+  ) : null;
   return (
     <>
       <Header screen="second" title="Our Coffee" />
@@ -44,6 +49,8 @@ const SingleProductPage = () => {
       >
         Back to all
       </Link>
+      {spinner}
+      {errorMessage}
       {content}
       <Footer />
     </>
