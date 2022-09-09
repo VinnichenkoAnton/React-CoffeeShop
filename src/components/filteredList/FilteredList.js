@@ -41,21 +41,21 @@ const FilteredList = () => {
     if (!idFromFilter || idFromFilter === 'All') {
       allCoffeeData().then(onCoffeeLoaded);
     } else if (idFromFilter && idFromFilter !== 'All') {
-      allCoffeeData().then(onCoffeeUpdateTwo);
+      allCoffeeData().then(onCoffeeUpdateId);
     }
   };
   const inputCheck = () => {
     if (!textFromFilter) {
       allCoffeeData().then(onCoffeeLoaded);
     } else if (textFromFilter) {
-      allCoffeeData().then(onCoffeeUpdate);
+      allCoffeeData().then(onCoffeeUpdateInput);
     }
   };
 
   const onCoffeeLoaded = (coffeeLoaded) => {
     setProductsList(coffeeLoaded);
   };
-  const onCoffeeUpdate = (coffeeLoaded) => {
+  const onCoffeeUpdateInput = (coffeeLoaded) => {
     setProductsList(
       coffeeLoaded.filter(
         (item) =>
@@ -65,7 +65,7 @@ const FilteredList = () => {
     );
   };
 
-  const onCoffeeUpdateTwo = (coffeeLoaded) => {
+  const onCoffeeUpdateId = (coffeeLoaded) => {
     setProductsList(coffeeLoaded.filter((item) => item.country === idFromFilter));
   };
 
