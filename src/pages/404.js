@@ -1,13 +1,19 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+import { Helmet } from 'react-helmet';
 
 import errorImg from '../../resources/errorImg.png';
 
 const Page404 = () => {
   return (
     <div>
+      <Helmet>
+        <meta name="description" content="The page you are trying to get doesnt exist" />
+        <title>404</title>
+      </Helmet>
       <img style={{ display: 'block', margin: '0 auto' }} src={errorImg} alt="Error" />
       <p style={{ textAlign: 'center', fontWeight: '700', fontSize: '36px' }}>Page doesn't exist</p>
-      <Link
+      <NavLink
         style={{
           display: 'block',
           textAlign: 'center',
@@ -19,7 +25,7 @@ const Page404 = () => {
         to=".."
       >
         Back to main page
-      </Link>
+      </NavLink>
     </div>
   );
 };

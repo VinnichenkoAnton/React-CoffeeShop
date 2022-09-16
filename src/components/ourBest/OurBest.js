@@ -11,6 +11,7 @@ import styles from './OurBest.module.scss';
 
 const OurBest = () => {
   const [bestProducts, setBestProducts] = useState([]);
+  const { loading, error, bestCoffeeData, clearError } = useCoffeeService();
 
   useEffect(() => {
     clearError();
@@ -19,8 +20,6 @@ const OurBest = () => {
   const onCoffeeLoaded = (coffeeLoaded) => {
     setBestProducts(coffeeLoaded);
   };
-
-  const { loading, error, bestCoffeeData, clearError } = useCoffeeService();
 
   const items = bestProducts.map(({ id, img, name, price }) => {
     return (

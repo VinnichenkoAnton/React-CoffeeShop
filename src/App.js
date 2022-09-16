@@ -23,24 +23,24 @@ function App() {
 
 const AnimatedSwitch = () => {
   const location = useLocation();
-
   const [displayLocation, setDisplayLocation] = useState(location);
   const [transitionStage, setTransistionStage] = useState('fadeIn');
 
   useEffect(() => {
-    if (location !== displayLocation) setTransistionStage('fadeOut');
+    if (location.pathname === '/notfound') {
+      setDisplayLocation(location);
+    } else if (location !== displayLocation) setTransistionStage('fadeOut');
   }, [location, displayLocation]);
 
+  const handleAnimationEnd = () => {
+    if (transitionStage === 'fadeOut') {
+      setTransistionStage('fadeIn');
+      setDisplayLocation(location);
+    }
+  };
+
   return (
-    <div
-      className={`${transitionStage}`}
-      onAnimationEnd={() => {
-        if (transitionStage === 'fadeOut') {
-          setTransistionStage('fadeIn');
-          setDisplayLocation(location);
-        }
-      }}
-    >
+    <div className={`${transitionStage}`} onAnimationEnd={handleAnimationEnd}>
       <Routes location={displayLocation}>
         <Route path="/" element={<MainPage />} />
 
@@ -50,7 +50,7 @@ const AnimatedSwitch = () => {
 
         <Route path="/yourpleasure" element={<YourPleasurePage />} />
 
-        <Route path="notfound" element={<Page404 />} />
+        <Route path="/notfound" element={<Page404 />} />
 
         <Route path="*" element={<Navigate to="/notfound" replace />} />
       </Routes>

@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet';
+
 import Header from '../header/Header';
 import AboutOurProduct from '../aboutOurProduct/AboutOurProduct';
 import FilteredList from '../filteredList/FilteredList';
@@ -8,6 +10,13 @@ import aboutOurBeansImg from '../../resources/aboutOurBeans.jpg';
 const OurCoffeePage = () => {
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Here you can choose your favourite flavour and find more information about it"
+        />
+        <title>Our coffee</title>
+      </Helmet>
       <Header screen="second" title="Our Coffee" />
       <AboutOurProduct
         img={aboutOurBeansImg}

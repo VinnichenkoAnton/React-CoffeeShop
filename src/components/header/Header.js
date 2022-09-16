@@ -5,6 +5,7 @@ import CoffeeBeans from '../coffeeBeans/CoffeBeans';
 import { BtnMain } from '../btn/Btn';
 
 import styles from './Header.module.scss';
+import { NavLink } from 'react-router-dom';
 
 const Header = ({ screen, title }) => {
   const additionalInfo = (
@@ -14,7 +15,9 @@ const Header = ({ screen, title }) => {
       <h2 className={classNames(styles.mainscreen__subtitle, styles.mainscreen__subtitle_mt20)}>
         Want to try our beans?
       </h2>
-      <BtnMain />
+      <NavLink to="/ourcoffee" className={styles.mainscreen__button}>
+        <BtnMain />
+      </NavLink>
     </>
   );
 

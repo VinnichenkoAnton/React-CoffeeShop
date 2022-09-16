@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet';
+
 import useCoffeeService from '../../services/useCoffeeService';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Spinner from '../spinner/Spinner';
@@ -59,15 +61,24 @@ const SingleProductPage = () => {
 
 const View = ({ infoForProduct }) => {
   return (
-    <AboutOurProduct
-      key={infoForProduct.id}
-      img={infoForProduct.img}
-      imgwidth="wide"
-      title={infoForProduct.name}
-      country={infoForProduct.country}
-      description={infoForProduct.description}
-      price={infoForProduct.price}
-    />
+    <>
+      <Helmet>
+        <meta
+          name="description"
+          content={`Here you get the description of ${infoForProduct.name}`}
+        />
+        <title>{`${infoForProduct.name}`}</title>
+      </Helmet>
+      <AboutOurProduct
+        key={infoForProduct.id}
+        img={infoForProduct.img}
+        imgwidth="wide"
+        title={infoForProduct.name}
+        country={infoForProduct.country}
+        description={infoForProduct.description}
+        price={infoForProduct.price}
+      />
+    </>
   );
 };
 export default SingleProductPage;
