@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/React-CoffeeShop/static/css/main.90bea7d9.css",
+    "main.js": "/React-CoffeeShop/static/js/main.8dbf0ccf.js",
+    "static/css/763.34eaacd3.chunk.css": "/React-CoffeeShop/static/css/763.34eaacd3.chunk.css",
+    "static/js/763.a4ee168e.chunk.js": "/React-CoffeeShop/static/js/763.a4ee168e.chunk.js",
+    "static/css/173.75e64026.chunk.css": "/React-CoffeeShop/static/css/173.75e64026.chunk.css",
+    "static/js/173.6acfe129.chunk.js": "/React-CoffeeShop/static/js/173.6acfe129.chunk.js",
+    "static/css/316.72068da6.chunk.css": "/React-CoffeeShop/static/css/316.72068da6.chunk.css",
+    "static/js/316.2b527e4c.chunk.js": "/React-CoffeeShop/static/js/316.2b527e4c.chunk.js",
+    "static/css/986.72068da6.chunk.css": "/React-CoffeeShop/static/css/986.72068da6.chunk.css",
+    "static/js/986.5e78a4bc.chunk.js": "/React-CoffeeShop/static/js/986.5e78a4bc.chunk.js",
+    "static/js/582.9fd4f4a2.chunk.js": "/React-CoffeeShop/static/js/582.9fd4f4a2.chunk.js",
+    "static/js/270.0108579b.chunk.js": "/React-CoffeeShop/static/js/270.0108579b.chunk.js",
+    "static/js/128.38366173.chunk.js": "/React-CoffeeShop/static/js/128.38366173.chunk.js",
+    "static/media/ourBestImg.jpg": "/React-CoffeeShop/static/media/ourBestImg.e73347dac8273b8cda2a.jpg",
+    "static/media/mainImg.jpg": "/React-CoffeeShop/static/media/mainImg.893e0f03ce210d76ba7c.jpg",
+    "static/media/secondaryImg.jpg": "/React-CoffeeShop/static/media/secondaryImg.3602fdfebe6d51af1e5d.jpg",
+    "static/media/tertiaryImg.jpg": "/React-CoffeeShop/static/media/tertiaryImg.ef2455d9e03f41d5a1fb.jpg",
+    "static/media/aboutOurBeans.jpg": "/React-CoffeeShop/static/media/aboutOurBeans.3fded8015d0e082cab2a.jpg",
+    "static/media/errorImg.png": "/React-CoffeeShop/static/media/errorImg.ab787e69326ed479d976.png",
+    "static/media/aboutOurGoods.jpg": "/React-CoffeeShop/static/media/aboutOurGoods.80dc010716229ced92c2.jpg",
+    "static/media/threeCoffeeBeans.svg": "/React-CoffeeShop/static/media/threeCoffeeBeans.6495e102f339fea011d73109cd7ebe54.svg",
+    "index.html": "/React-CoffeeShop/index.html",
+    "main.90bea7d9.css.map": "/React-CoffeeShop/static/css/main.90bea7d9.css.map",
+    "main.8dbf0ccf.js.map": "/React-CoffeeShop/static/js/main.8dbf0ccf.js.map",
+    "763.34eaacd3.chunk.css.map": "/React-CoffeeShop/static/css/763.34eaacd3.chunk.css.map",
+    "763.a4ee168e.chunk.js.map": "/React-CoffeeShop/static/js/763.a4ee168e.chunk.js.map",
+    "173.75e64026.chunk.css.map": "/React-CoffeeShop/static/css/173.75e64026.chunk.css.map",
+    "173.6acfe129.chunk.js.map": "/React-CoffeeShop/static/js/173.6acfe129.chunk.js.map",
+    "316.72068da6.chunk.css.map": "/React-CoffeeShop/static/css/316.72068da6.chunk.css.map",
+    "316.2b527e4c.chunk.js.map": "/React-CoffeeShop/static/js/316.2b527e4c.chunk.js.map",
+    "986.72068da6.chunk.css.map": "/React-CoffeeShop/static/css/986.72068da6.chunk.css.map",
+    "986.5e78a4bc.chunk.js.map": "/React-CoffeeShop/static/js/986.5e78a4bc.chunk.js.map",
+    "582.9fd4f4a2.chunk.js.map": "/React-CoffeeShop/static/js/582.9fd4f4a2.chunk.js.map",
+    "270.0108579b.chunk.js.map": "/React-CoffeeShop/static/js/270.0108579b.chunk.js.map",
+    "128.38366173.chunk.js.map": "/React-CoffeeShop/static/js/128.38366173.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90bea7d9.css",
+    "static/js/main.8dbf0ccf.js"
+  ]
+}
