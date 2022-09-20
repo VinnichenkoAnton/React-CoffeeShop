@@ -11,62 +11,55 @@ const FilteredList = () => {
   const { loading, error, allCoffeeData, clearError } = useCoffeeService();
 
   const [idFromFilter, setIdFromFilter] = useState(null);
-
   const [textFromFilter, setTextFromFilter] = useState('');
-
   const [productsList, setProductsList] = useState([]);
 
   const filterClickHandler = (id) => {
     setIdFromFilter(id);
   };
-
   const filterTypingHandler = (text) => {
     setTextFromFilter(text);
   };
 
   useEffect(() => {
-    clickCheck(idFromFilter);
+    if (!idFromFilter || idFromFilter === 'All') {
+      onCoffeeLoaded();
+    } else {
+      onCoffeeUpdateId();
+    }
   }, [idFromFilter]);
-
   useEffect(() => {
-    inputCheck(textFromFilter);
+    if (!textFromFilter) {
+      onCoffeeLoaded();
+    } else {
+      onCoffeeUpdateInput();
+    }
   }, [textFromFilter]);
-
   useEffect(() => {
     clearError();
-    allCoffeeData().then(onCoffeeLoaded);
+    onCoffeeLoaded();
   }, []);
 
-  const clickCheck = () => {
-    if (!idFromFilter || idFromFilter === 'All') {
-      allCoffeeData().then(onCoffeeLoaded);
-    } else if (idFromFilter && idFromFilter !== 'All') {
-      allCoffeeData().then(onCoffeeUpdateId);
-    }
+  const onCoffeeLoaded = () => {
+    allCoffeeData().then((response) => {
+      setProductsList(response);
+    });
   };
-  const inputCheck = () => {
-    if (!textFromFilter) {
-      allCoffeeData().then(onCoffeeLoaded);
-    } else if (textFromFilter) {
-      allCoffeeData().then(onCoffeeUpdateInput);
-    }
+  const onCoffeeUpdateInput = () => {
+    allCoffeeData().then((response) => {
+      setProductsList(
+        response.filter(
+          (item) =>
+            item.name.trim().toLowerCase().includes(textFromFilter) ||
+            item.price.trim().includes(textFromFilter),
+        ),
+      );
+    });
   };
-
-  const onCoffeeLoaded = (coffeeLoaded) => {
-    setProductsList(coffeeLoaded);
-  };
-  const onCoffeeUpdateInput = (coffeeLoaded) => {
-    setProductsList(
-      coffeeLoaded.filter(
-        (item) =>
-          item.name.trim().toLowerCase().includes(textFromFilter) ||
-          item.price.trim().includes(textFromFilter),
-      ),
-    );
-  };
-
-  const onCoffeeUpdateId = (coffeeLoaded) => {
-    setProductsList(coffeeLoaded.filter((item) => item.country === idFromFilter));
+  const onCoffeeUpdateId = () => {
+    allCoffeeData().then((response) => {
+      setProductsList(response.filter((item) => item.country === idFromFilter));
+    });
   };
 
   const errorMessage = error ? <ErrorMessage /> : null;

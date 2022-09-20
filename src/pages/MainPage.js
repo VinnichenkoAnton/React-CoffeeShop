@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet';
 
-import Header from '../header/Header';
-import AboutUs from '../aboutUs/AboutUs';
-import OurBest from '../ourBest/OurBest';
-import Footer from '../footer/Footer';
+import Header from '../components/header/Header';
+import AboutUs from '../components/aboutUs/AboutUs';
+import OurBest from '../components/ourBest/OurBest';
+import Footer from '../components/footer/Footer';
 
 const MainPage = () => {
   return (

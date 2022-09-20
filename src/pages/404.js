@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet';
 
-import errorImg from '../../resources/errorImg.png';
+import errorImg from '../resources/errorImg.png';
 
 const Page404 = () => {
   return (

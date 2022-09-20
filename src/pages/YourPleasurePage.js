@@ -1,10 +1,10 @@
 import { Helmet } from 'react-helmet';
 
-import Header from '../header/Header';
-import AboutOurProduct from '../aboutOurProduct/AboutOurProduct';
-import Footer from '../footer/Footer';
+import Header from '../components/header/Header';
+import AboutOurProduct from '../components/aboutOurProduct/AboutOurProduct';
+import Footer from '../components/footer/Footer';
 
-import aboutOurGoodsImg from '../../resources/aboutOurGoods.jpg';
+import aboutOurGoodsImg from '../resources/aboutOurGoods.jpg';
 
 const YourPleasurePage = () => {
   return (

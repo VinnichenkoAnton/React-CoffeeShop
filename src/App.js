@@ -5,11 +5,11 @@ import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from 'r
 import Spinner from './components/spinner/Spinner';
 import './App.scss';
 
-const MainPage = lazy(() => import('./components/pages/MainPage'));
-const OurCoffeePage = lazy(() => import('./components/pages/OurCoffeePage'));
-const SingleProductPage = lazy(() => import('./components/pages/SingleProductPage'));
-const YourPleasurePage = lazy(() => import('./components/pages/YourPleasurePage'));
-const Page404 = lazy(() => import('./components/pages/404'));
+const MainPage = lazy(() => import('./pages/MainPage'));
+const OurCoffeePage = lazy(() => import('./pages/OurCoffeePage'));
+const SingleProductPage = lazy(() => import('./pages/SingleProductPage'));
+const YourPleasurePage = lazy(() => import('./pages/YourPleasurePage'));
+const Page404 = lazy(() => import('./pages/404'));
 
 function App() {
   return (

@@ -3,12 +3,12 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet';
 
-import useCoffeeService from '../../services/useCoffeeService';
-import ErrorMessage from '../errorMessage/ErrorMessage';
-import Spinner from '../spinner/Spinner';
-import Header from '../header/Header';
-import AboutOurProduct from '../aboutOurProduct/AboutOurProduct';
-import Footer from '../footer/Footer';
+import useCoffeeService from '../services/useCoffeeService';
+import ErrorMessage from '../components/errorMessage/ErrorMessage';
+import Spinner from '../components/spinner/Spinner';
+import Header from '../components/header/Header';
+import AboutOurProduct from '../components/aboutOurProduct/AboutOurProduct';
+import Footer from '../components/footer/Footer';
 
 const SingleProductPage = () => {
   const { loading, error, clearError, allCoffeeData } = useCoffeeService();

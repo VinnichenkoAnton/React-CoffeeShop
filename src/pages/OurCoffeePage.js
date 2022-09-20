@@ -1,11 +1,11 @@
 import { Helmet } from 'react-helmet';
 
-import Header from '../header/Header';
-import AboutOurProduct from '../aboutOurProduct/AboutOurProduct';
-import FilteredList from '../filteredList/FilteredList';
-import Footer from '../footer/Footer';
+import Header from '../components/header/Header';
+import AboutOurProduct from '../components/aboutOurProduct/AboutOurProduct';
+import FilteredList from '../components/filteredList/FilteredList';
+import Footer from '../components/footer/Footer';
 
-import aboutOurBeansImg from '../../resources/aboutOurBeans.jpg';
+import aboutOurBeansImg from '../resources/aboutOurBeans.jpg';
 
 const OurCoffeePage = () => {
   return (
