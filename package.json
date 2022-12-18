@@ -1,5 +1,6 @@
 {
   "name": "coffee-shop",
+  "homepage": "https://vinnichenkoanton.github.io/React-CoffeeShop/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
